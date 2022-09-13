@@ -16,3 +16,27 @@ const newPara2 = document.createElement("p")
 newPara2.textContent = "ME TOO!"
 newDiv.append(newH1, newPara2);
 container.append(newDiv);
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', () => {
+  alert("Hello World");
+});
+baby.addEventListener('click', alertFunction);
+function alertFunction() {
+  alert("YAY! YOU DID IT!");
+}
+const anotherbutton = document.querySelector('#anotherbutton');
+anotherbutton.addEventListener('click', function (e) {
+  console.log(e);
+});
+anotherbutton.addEventListener('click', function (e) {
+  e.target.style.background = 'blue';
+});
+const buttons = document.querySelectorAll('button');
+// we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+
+  // and for each one we add a 'click' listener
+  button.addEventListener('click', () => {
+    alert(button.id);
+  });
+});
